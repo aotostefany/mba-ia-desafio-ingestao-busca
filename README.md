@@ -32,6 +32,14 @@ Descreva abaixo como executar a sua solução.
 
 ### Execução
 
+Crie arquivo .env na raiz do projeto com as variáveis de ambiente necessárias (veja o exemplo em .env.example).
+
+Rodar docker-compose:
+
+```bash
+docker-compose up -d
+```
+
 Para iniciar a criação do índice de vetores, execute:
 
 ```bash

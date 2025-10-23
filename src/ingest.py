@@ -55,9 +55,8 @@ def ingest_pdf(pdf_path, provider="gemini"):
 
     # 5. Criar vetorstore PGVector conectado ao Postgres
     vectorstore = PGVector(
-        connection="postgresql://postgres:postgres@localhost:5432/rag",
+        connection=os.getenv("DATABASE_URL"),
         embeddings=embeddings_model,
-        table_name="vectors_table"
     )
 
     for i, text in enumerate(texts, start=1):

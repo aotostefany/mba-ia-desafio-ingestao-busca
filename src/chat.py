@@ -59,6 +59,7 @@ def chat(embeddings, llm, vectorstore):
 
         # Chamar a LLM.
         answer = llm.invoke(prompt_template)
+
         # Retornar a resposta ao usuário.
         print(f"\nResposta: {answer.content}\n")
 
@@ -68,7 +69,7 @@ def main():
 
     # Conecta com o vetor armazenado no PostgreSQL (usa PGVECTOR_DB_URL do ambiente)
     vectorstore =PGVector(
-        connection="postgresql://postgres:postgres@localhost:5432/rag",
+        connection=os.getenv("DATABASE_URL"),
         embeddings=embeddings,
     )
 
