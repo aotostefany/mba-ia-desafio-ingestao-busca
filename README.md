@@ -6,7 +6,7 @@ Descreva abaixo como executar a sua solução.
 
 - Python 3.8 ou superior
 - Ambiente virtual (recomendado)
-- Variáveis de ambiente configuradas:
+- Variáveis de ambiente configuradas .env:
   - OPENAI_API_KEY: Sua chave de API da OpenAI
   - GEMINI_API_KEY: Sua chave de API do Gemini
 
